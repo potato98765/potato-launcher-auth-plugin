@@ -1,0 +1,17 @@
+name: PotatoAuth
+version: 0.1.0
+main: com.mrpotato.potatoauth.PotatoAuthPlugin
+api-version: "1.21"
+authors:
+  - MrPotato
+description: Automatic PotatoAccount login.
+commands:
+  potato:
+    description: PotatoAccount verification commands
+    usage: /potato verify <accessToken>
+    aliases:
+      - potatoauth
+permissions:
+  potatoauth.admin:
+    description: Allows managing PotatoAuth plugin settings and links.
+    default: op

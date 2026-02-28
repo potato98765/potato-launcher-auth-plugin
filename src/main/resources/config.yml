@@ -1,0 +1,49 @@
+potatoAuthBaseUrl: "https://potato-launcher.duckdns.org:25585"
+requestTimeoutSeconds: 8
+
+# Plugin channel used for challenge/response packets.
+pluginChannel: "potatoauth:auth"
+
+# Delay before first challenge packet after join.
+challengeSendDelayTicks: 20
+
+# Repeat challenge packet this often.
+challengeRepeatIntervalTicks: 30
+
+# Total number of challenge sends (including first).
+challengeRepeatCount: 6
+
+# Also send a legacy binary challenge packet for older injector code.
+sendLegacyBinaryChallenge: true
+
+# Retry hasJoined check to avoid short timing races after client join call.
+hasJoinedAttempts: 6
+hasJoinedRetryDelayMillis: 250
+
+# If hasJoined fails but client still sends legacy proof, try old verify endpoint.
+allowLegacyProofFallback: true
+
+# Enable essential PotatoAuth diagnostics (timeouts, fallback attempts, verify details, kick reasons, apply errors).
+debugLogging: false
+
+# How long verified sessions are reused before requiring another handshake.
+sessionMinutes: 120
+
+# Kick players that do not complete handshake in this time.
+verifyTimeoutSeconds: 90
+
+# Reuse verification only when the player reconnects from the same IP.
+requireSameIpForSessionReuse: true
+
+# Save and enforce a fixed profile-id binding for each username.
+enforceLinkedProfile: true
+
+messages:
+  pending: "&eAuthenticating with PotatoAuth. Please wait..."
+  checking: "&7Checking PotatoAuth session..."
+  success: "&aPotato authentication succeeded."
+  failedKick: "&cNot authenticated with PotatoAuth: {reason}"
+  timeoutKick: "&cPotato authentication timed out."
+  statusPending: "&eStatus: pending verification"
+  statusVerified: "&aStatus: authenticated"
+  statusUnverified: "&cStatus: not authenticated"
