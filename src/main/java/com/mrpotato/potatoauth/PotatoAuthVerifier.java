@@ -265,7 +265,7 @@ public final class PotatoAuthVerifier {
     private static String normalizeBaseUrl(String baseUrl) {
         String value = String.valueOf(baseUrl).trim();
         if (value.isEmpty()) {
-            value = "https://potato-launcher.duckdns.org:25585";
+            value = "https://potato-launcher.heliohost.us";
         }
         while (value.endsWith("/")) {
             value = value.substring(0, value.length() - 1);

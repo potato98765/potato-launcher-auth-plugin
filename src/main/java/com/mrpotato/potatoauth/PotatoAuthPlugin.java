@@ -105,7 +105,7 @@ public final class PotatoAuthPlugin extends JavaPlugin implements PluginMessageL
     public void reloadRuntimeConfig() {
         reloadConfig();
 
-        final String baseUrl = getConfig().getString("potatoAuthBaseUrl", "https://potato-launcher.duckdns.org:25585");
+        final String baseUrl = getConfig().getString("potatoAuthBaseUrl", "https://potato-launcher.heliohost.us");
         final long requestTimeoutSeconds = Math.max(3L, getConfig().getLong("requestTimeoutSeconds", 8L));
         this.verifier = new PotatoAuthVerifier(baseUrl, requestTimeoutSeconds);
         this.pluginChannel = String.valueOf(getConfig().getString("pluginChannel", "potatoauth:auth")).trim();

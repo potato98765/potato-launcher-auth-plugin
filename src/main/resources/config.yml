@@ -1,4 +1,4 @@
-potatoAuthBaseUrl: "https://potato-launcher.duckdns.org:25585"
+potatoAuthBaseUrl: "https://potato-launcher.heliohost.us"
 requestTimeoutSeconds: 8
 
 # Plugin channel used for challenge/response packets.
